@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio — Alexey Miagkikh" />
+  <title>Alexey Miagkikh — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Topbar -->
+  <nav class="nav" aria-label="Основная навигация">
+    <div class="nav-inner">
+      <!-- бренд убран -->
+      <div class="nav-right">
+        <div class="nav-links" id="nav-menu">
+          <a href="#about">Обо мне</a>
+          <a href="#skills">Навыки</a>
+          <a href="#projects">Работы</a>
+          <a href="#quote">Цитата</a>
+          <a href="#contact">Контакты</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему" aria-pressed="false">🌙</button>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-controls="nav-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-split" id="home" role="banner">
+    <div class="hero-shape" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Hi, I’m</p>
+        <h1>Alexey Miagkikh</h1>
+        <p class="lead">Java / Frontend Developer. Делаю проекты на Java/Spring и развиваю фронтенд (HTML, CSS, JS, React).</p>
+
+        <div class="greet card">
+          <p id="greeting-text" class="greet-text">Добро пожаловать!</p>
+          <div class="greet-row">
+            <input id="name-input" class="greet-input" type="text" placeholder="Ваше имя" autocomplete="name" />
+            <button id="save-name" class="btn btn-primary" type="button">Сохранить</button>
+            <button id="clear-name" class="btn btn-ghost" type="button">Сброс</button>
+          </div>
+        </div>
+
+        <ul class="stats">
+          <li><strong>8+</strong><span>пет-проектов</span></li>
+          <li><strong>Java</strong><span>Spring / JavaFX</span></li>
+          <li><strong>Frontend</strong><span>React • JS</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=900&auto=format&fit=crop"
+            alt="Портрет мужчины в деловом стиле"
+            width="900" height="900"
+            onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1595152772835-219674b2a8a6?q=80&w=900&auto=format&fit=crop';" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section card">
+    <h2>Обо мне</h2>
+    <p>Студент из Бишкека и начинающий Java-разработчик. Цель — вырасти до full-stack инженера, собирать сильные проекты и писать поддерживаемый код.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section card">
+    <h2>Навыки</h2>
+    <div class="skills-grid">
+      <div class="skill"><span>☕</span>Java</div>
+      <div class="skill"><span>🌱</span>Spring Boot</div>
+      <div class="skill"><span>🖥️</span>JavaFX</div>
+      <div class="skill"><span>⚛️</span>React</div>
+      <div class="skill"><span>⚡</span>JavaScript</div>
+      <div class="skill"><span>🎨</span>CSS</div>
+      <div class="skill"><span>🌐</span>HTML</div>
+      <div class="skill"><span>🐳</span>Docker</div>
+      <div class="skill"><span>🐙</span>GitHub</div>
+      <div class="skill"><span>🧪</span>JUnit</div>
+      <div class="skill"><span>🗃️</span>SQL</div>
+      <div class="skill"><span>🔧</span>REST API</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section card">
+    <h2>Работы</h2>
+    <div class="gallery">
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/MediaPlayer2Attempt" target="_blank" rel="noopener"><span>Media Player</span></a>
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/spring-boot-guide-main" target="_blank" rel="noopener"><span>Spring Boot Guide</span></a>
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/PhysicsGeomOpticsProject" target="_blank" rel="noopener"><span>Geom Optics</span></a>
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/AlexeyColoredPictureProject" target="_blank" rel="noopener"><span>Colored Picture</span></a>
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/backend_project_leha" target="_blank" rel="noopener"><span>Backend Project</span></a>
+      <a class="tile" href="https://github.com/AlexeyMiagkikh/FloppaClicker" target="_blank" rel="noopener"><span>Floppa Clicker</span></a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote" class="section card">
+    <h2>Цитата дня</h2>
+    <p id="quote-text">Загрузка цитаты...</p>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contact" class="section card">
+    <h2>Контакты</h2>
+    <p class="contact-links">
+      <a href="tel:+996555353525">📞 +996 555 35 35 25</a><br>
+      <a href="mailto:m.alex2018@mail.ru">📧 m.alex2018@mail.ru</a><br>
+      <a href="https://t.me/Alexey_Miagkikh" target="_blank" rel="noopener">💬 Telegram</a><br>
+      <a href="https://github.com/AlexeyMiagkikh" target="_blank" rel="noopener">🐙 GitHub</a>
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Alexey Miagkikh · <span id="clock"></span></p>
+  </footer>
+
+  <!-- Scroll-To-Top -->
+  <button id="to-top" class="to-top" aria-label="Наверх" title="Наверх">AM</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
